@@ -1,18 +1,20 @@
 import { useState } from "react";
+import Button from "@mui/material/Button";
+
 function Counter() {
     const [count, setCount] = useState(0);
 
     return (
-        <div>
+        <div>+
             <h1>Count: {count}</h1>
-            <button onClick={() => setCount(count + 1)} sx={{ mr: 2 }}>
+            <Button variant="contained" onClick={() => setCount(count + 1)} sx={{ mr: 2 }}>
                 Increment
-            </button>
+            </Button>
 
 
-            <button onClick={() => setCount(count - 1)} sx={{ mr: 2 }}>
+            <Button variant="outlined" onClick={() => setCount(count - 1)} sx={{ mr: 2 }}>
                 Decrement
-            </button>
+            </Button>
         </div>
     );
 }
